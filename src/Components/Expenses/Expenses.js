@@ -25,19 +25,39 @@ const Expenses = (props) => {
     <div>
     
 
-      <ExpenseFilter
-        selected={filteredYear}
-        onChangeFilter={filterChangeHandler}
-      />
-  {
+    <ExpenseFilter
+      selected={filteredYear}
+      onChangeFilter={filterChangeHandler}
+    />
+
+    {   filteredExpenses.length===0 && <p>No Expense found.</p> }
+
+
+    {/*  Using Js Ternary instead of If-else.
+        Using a powerfull Logic */}
+
+    {
+      filteredExpenses.length > 0 ? ( 
+      <p>No expenses found.</p> ): ( 
+      filteredExpenses.map( (expense)=> 
+        <Expenseitem 
+          key={expense.id}
+          title={expense.title} 
+          amount={expense.amount} 
+          date={expense.date} 
+        /> ) )
+    
+    }
+
+  {/* {
   filteredExpenses.map( (expense)=> 
-    < Expenseitem 
+    <Expenseitem 
       key={expense.id}
       title={expense.title} 
       amount={expense.amount} 
       date={expense.date} 
     /> )
-  }
+  } */}
 
     
   </div> 
