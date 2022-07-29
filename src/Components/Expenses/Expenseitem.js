@@ -19,6 +19,7 @@ const Expenseitem=(props)=>{
 
 return(
 <>
+<li>
 <div className='expense-item'>
     <ExpenseDate date={props.date} />
 
@@ -30,8 +31,8 @@ return(
 
     {/* <button className='m-2' onClick= {ClickHandler} >Change Title</button> */}
 
-</div> 
-
+</div>
+</li> 
 </>
 )
 }

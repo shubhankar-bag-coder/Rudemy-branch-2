@@ -1,8 +1,9 @@
 import React,{useState} from 'react';
-import Expenseitem from './Expenseitem'
+// import Expenseitem from './Expenseitem'
 import Card from '../UI/Card';
 import './Expenses.css'
 import ExpenseFilter from '../Filter/ExpenseFilter'
+import ExpenseList from './ExpenseList';
 
 
 const Expenses = (props) => {
@@ -23,33 +24,22 @@ const Expenses = (props) => {
  return (
   <Card className="expenses">
     <div>
-    
 
     <ExpenseFilter
       selected={filteredYear}
       onChangeFilter={filterChangeHandler}
     />
 
-    {   filteredExpenses.length===0 && <p>No Expense found.</p> }
+    <ExpenseList
+      items={filteredExpenses}
+    />
 
 
-    {/*  Using Js Ternary instead of If-else.
-        Using a powerfull Logic */}
 
-    {
-      filteredExpenses.length > 0 &&  
-      filteredExpenses.map( (expense)=> 
-        <Expenseitem 
-          key={expense.id}
-          title={expense.title} 
-          amount={expense.amount} 
-          date={expense.date} 
-        /> )
-    
-    }
+   {/*  Loads default Data */}
 
   {/* {
-  filteredExpenses.map( (expense)=> 
+  props.items.map( (expense)=> 
     <Expenseitem 
       key={expense.id}
       title={expense.title} 
