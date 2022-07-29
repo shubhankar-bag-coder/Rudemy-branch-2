@@ -37,15 +37,14 @@ const Expenses = (props) => {
         Using a powerfull Logic */}
 
     {
-      filteredExpenses.length > 0 ? ( 
-      <p>No expenses found.</p> ): ( 
+      filteredExpenses.length > 0 &&  
       filteredExpenses.map( (expense)=> 
         <Expenseitem 
           key={expense.id}
           title={expense.title} 
           amount={expense.amount} 
           date={expense.date} 
-        /> ) )
+        /> )
     
     }
 
