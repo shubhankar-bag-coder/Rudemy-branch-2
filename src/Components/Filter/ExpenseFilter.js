@@ -1,7 +1,7 @@
 import React from 'react'
 import './ExpensesFilter.css'
 
-export const ExpenseFilter = (props) => {
+const ExpenseFilter = (props) => {
 
 
   let dropdownChangehandler=(event)=>
@@ -26,3 +26,5 @@ return(
 </>
 )
 }
+
+export default ExpenseFilter;
