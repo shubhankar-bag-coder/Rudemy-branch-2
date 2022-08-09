@@ -22,17 +22,8 @@ return(
         }
 
     </ul>
-
 </div>
 )
 };
-
-
-
-
-
-
-
-
 
 export default ExpenseList;

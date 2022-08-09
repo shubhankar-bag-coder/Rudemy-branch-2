@@ -8,16 +8,16 @@ import ExpenseList from './ExpenseList';
 
 const Expenses = (props) => {
 
-  let [ filteredYear, SetfilterYear ] = useState('2022')
+  const [ filteredYear, SetfilterYear ] = useState('2022')
 
-  let filterChangeHandler= selectedYear=>
+  const filterChangeHandler= selectedYear=>
   {
     console.log('Expense.js');
     // console.log(selectedYear);
     SetfilterYear(selectedYear);
   };
 
-  let filteredExpenses = props.items.filter(expense => {
+  const filteredExpenses = props.items.filter(expense => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
 
@@ -27,12 +27,10 @@ const Expenses = (props) => {
 
     <ExpenseFilter
       selected={filteredYear}
-      onChangeFilter={filterChangeHandler}
-    />
+      onChangeFilter={filterChangeHandler} />
 
     <ExpenseList
-      items={filteredExpenses}
-    />
+      items={filteredExpenses} />
 
 
 
@@ -52,7 +50,7 @@ const Expenses = (props) => {
   </div> 
   </Card>
    
-  );
+);
 }
 
 export default Expenses;

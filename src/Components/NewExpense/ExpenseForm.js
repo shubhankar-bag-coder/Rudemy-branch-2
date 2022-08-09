@@ -60,7 +60,6 @@ const dateChangeHandler=(event)=>
 
 const submitHandler=(event)=>
 {
-
     event.preventDefault();
     const expenseData={
      title: enteredTitle,
@@ -77,7 +76,7 @@ const submitHandler=(event)=>
 };
 
 
-// if (!enteredTitle || !enteredAmount || !enteredDate === (' ')){
+// if (enteredTitle.length===0 || enteredAmount.length===0 || enteredDate.length===0 ) {
 //     alert('Empty Data cannot be added')
 // }
 
@@ -91,7 +90,7 @@ return(
 
    <div className='new-expense__control'>
     <label>Title</label>
-    <input 
+    <input required
     type='text' onChange= { titleChangeHandler } value={enteredTitle}
     />
    </div>
@@ -99,7 +98,7 @@ return(
 
    <div className='new-expense__control'>
     <label>Amount</label>
-    <input 
+    <input required
     type='number' min='0.01' step='0.01' 
     onChange={amountChangeHandler} value={enteredAmount}  
     />
@@ -108,7 +107,7 @@ return(
 
    <div className='new-expense__control'>
     <label>Date</label>
-    <input 
+    <input required
     type='date' min='2019-01-01' max='2022-12-31' 
     onChange={dateChangeHandler}  value={enteredDate}/>
    </div>
