@@ -1,5 +1,6 @@
 import Expenseitem from "./Expenseitem";
 import './Expenseitem.css'
+import './ExpenseList.css'
 
 const ExpenseList= props=>{
 
@@ -14,6 +15,8 @@ return(
         {
            props.items.map( (expense)=> 
             <Expenseitem 
+            //   key={index+1}
+
               key={expense.id}
               title={expense.title} 
               amount={expense.amount} 
