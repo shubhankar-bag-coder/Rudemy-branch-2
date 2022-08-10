@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import Header from "./Components/Header";
+// import Header from "./Components/Header";
 import Expenses from "./Components/Expenses/Expenses";
 import NewExpense from "./Components/NewExpense/NewExpense";
 
