@@ -9,7 +9,7 @@ Hello, welcome to my react App.
 
      npm install
 
-# Project Starts Ends :fork_and_knife:
+# Project Starts/Ends :fork_and_knife:
 
 3.Project:
 The code starts from Section 5 63 & Code stops no. 73
